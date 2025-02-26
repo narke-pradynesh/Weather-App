@@ -1,1 +1,0 @@
-OpenWeatherAPI: c9fc515c85a7ddcbb937624b5d914171
