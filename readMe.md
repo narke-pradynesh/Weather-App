@@ -1,9 +1,9 @@
 You need to install PyQt5 in order to run this script:
 
 To do so,
-    Run -$ pip3 install pyqt (for Pip Environments)
-    Or
-    Run -$ conda install pyqt (for Anaconda Environments)
+    run ```pip3 install pyqt (for Pip Environments)```
+    or
+    run ```conda install pyqt (for Anaconda Environments)```
 
 Next,
 Open Weather App
