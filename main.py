@@ -2,7 +2,10 @@ import sys
 import requests
 from PyQt5.QtWidgets import (QApplication, QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout)
 from PyQt5.QtCore import Qt
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 class myApplication(QWidget):
     def __init__(self):
         super().__init__()
@@ -48,31 +51,31 @@ class myApplication(QWidget):
                 font-family: calibri;
             }
             QLabel#city_name{
-                font-size: 100px;
-                font-style: italic;
+                font-size: 30px;
             }
             QLineEdit#name_plcholder{
-                font-size: 110px;
+                font-size: 30px;
+                padding: 1px;
             }
             QPushButton#get_button{
-                font-size: 60px;
+                font-size: 20px;
                 font-weight: bold;
             }
             QLabel#temp{
-                font-size: 140px;
+                font-size: 70px;
             }
             QLabel#symbol{
-                font-size: 150px;
+                font-size: 50px;
                 font-family: Segoe UI emoji;
             }
             QLabel#description{
-                font-size: 100px;
+                font-size: 50px;
             }
         ''')
         self.get_button.clicked.connect(self.get_weather)
 
     def get_weather(self):
-        api_key = "######"
+        api_key = os.getenv("API_KEY")
         city = self.name_plcholder.text()
         url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
 
